@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post">
+    Enter a number: 
+    <input type="number" name="num">
+    <input type="submit">
+</form>
+
+<?php
+if (isset($_POST['num'])) {
+    $n = $_POST['num'];
+
+    echo "<table border='1'>";
+
+    for ($i = 1; $i <= $n; $i++) {
+        echo "<tr>";
+        for ($j = 1; $j <= $n; $j++) {
+            echo "<td>" . ($i * $j) . "</td>";
+        }
+        echo "</tr>";
+    }
+
+    echo "</table>";
+}
+?>
+
+</body>
+</html>

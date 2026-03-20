@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Control</title>
+</head>
+<body>
+
+<p id="text">This is some dummy text.</p>
+
+<h3>Change Text Color (RGB)</h3>
+<input type="text" id="r" placeholder="R (0-255)">
+<input type="text" id="g" placeholder="G (0-255)">
+<input type="text" id="b" placeholder="B (0-255)">
+
+<h3>Border Width</h3>
+<input type="text" id="width" placeholder="px">
+
+<button onclick="changeStyle()">Apply</button>
+
+<script>
+function changeStyle() {
+    let r = document.getElementById("r").value;
+    let g = document.getElementById("g").value;
+    let b = document.getElementById("b").value;
+    let width = document.getElementById("width").value;
+
+    let text = document.getElementById("text");
+
+    text.style.color = `rgb(${r},${g},${b})`;
+    text.style.border = `${width}px solid rgb(${r},${g},${b})`;
+}
+</script>
+
+</body>
+</html>
